@@ -1,0 +1,244 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MAIN.master.cs" Inherits="SaleOrderBooking.MAIN" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+    <title>Sales Order Processing &middot;  </title>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+  
+    
+ 
+   
+     
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderAdditionalTopJSCSS" runat="server">
+   
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <style>
+        .floating-boxsmall {
+            display: inline-block;
+            width: 228px;
+            height: 80px;
+            margin: 10px;
+            border: 1px solid #0094ff;
+        }
+    </style>
+    
+    <header>
+        <nav class="navbar navbar-default navbar-static-top no-margin" role="navigation">
+            <div class="navbar-brand-group">
+                <a class="navbar-sidebar-toggle navbar-link" data-sidebar-toggle="">
+                    <i class="fa fa-lg fa-fw fa-bars"></i>
+                </a>
+                <a class="navbar-brand hidden-xxs" href="../adminAcc/dashboard.aspx">
+                    <span class="sc-visible">I
+                    </span>
+                    <span class="sc-hidden">
+                        <span class="semi-bold">Sales Order Processing</span>
+
+                    </span>
+                </a>
+            </div>
+            <ul class="nav navbar-nav navbar-nav-expanded pull-right margin-md-right">
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle navbar-user" href="javascript:;">
+
+                        <img class="img-circle" src="../image/ppc-tracking.png" />
+                        <span class="hidden-xs"> </span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu pull-right-xs">
+
+                        <li><a href="../logout.aspx?exid=logout">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+    <div class="page-wrapper">
+        <aside class="sidebar sidebar-default">
+            <div class="sidebar-profile">
+                <img class="img-circle profile-image" src="../image/ppc-tracking.png" />
+
+                <div class="profile-body">
+                    <h4>
+                           
+
+                    </h4>
+
+                    <div class="sidebar-user-links">
+
+                        <a class="btn btn-link btn-xs" href="../logout.aspx" data-placement="bottom" data-toggle="tooltip" data-original-title="Logout"><i class="fa fa-sign-out"></i></a>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="nav-dropdown    ">
+                        <a href="#" title="Dashboards">
+                            <i class="fa fa-lg fa-fw fa-home"></i>Dashboards
+                        </a>
+                        <ul class="nav-sub">
+                            <li class="active open">
+                                <a href="../adminacc/dashboard.aspx?exid=dashboard" title="Dashboard">
+                                    <i class="fa fa-fw fa-caret-right"></i>Dashboard
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-dropdown  ">
+                        <a href="#" title="Masters">
+                            <i class="fa fa-lg fa-fw fa-edit"></i>Masters
+                        </a>
+                        <ul class="nav-sub">
+                             <li>
+                                <a href="..SOB.aspx?exid=masters" title="Sales Man Master">
+                                    <i class="fa fa-fw fa-caret-right"></i>Sales Man Master
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../MASTERS/AccountMaster.aspx?exid=masters" title="Account Master">
+                                    <i class="fa fa-fw fa-caret-right"></i>Vendor Master
+                                </a>
+                                </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-dropdown">
+                        <a href="#" title="Transaction">
+                            <i class="fa fa-lg fa-fw fa-edit"></i>Transaction
+                        </a>
+                        <ul class="nav-sub">
+
+
+                            <li>
+                                <a href="../adminacc/Order_Booking.aspx?exid=Transaction">
+                                    <i class="fa fa-fw fa-caret-right"></i>Sales Order Booking
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../adminacc/Order_Approval.aspx?exid=Transaction">
+                                    <i class="fa fa-fw fa-caret-right"></i>Sales Order Approval
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../adminacc/DO_Schedule.aspx?exid=Transaction">
+                                    <i class="fa fa-fw fa-caret-right"></i>Delivery Order Schedule
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                    <li class="nav-dropdown">
+                        <a href="#" title="REPORTS">
+                            <i class="fa fa-file-picture-o"></i>&nbsp;REPORTS
+                        </a>
+                        <ul class="nav-sub">
+                            <li>
+                                <a href="../Reports/order_report.aspx?exid=REPORT" title="Order Register">
+                                    <i class="fa fa-fw fa-caret-right"></i>Order Register
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../Reports/PORegister.aspx?exid=REPORT" title="Po Register">
+                                    <i class="fa fa-fw fa-caret-right"></i>Pending Order
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../Reports/GrnInwordRegister.aspx?exid=REPORT" title="Grn Register">
+                                    <i class="fa fa-fw fa-caret-right"></i>Order History
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                    <li class="nav-dropdown">
+                        <a href="#" title="MIS REPORTS">
+                            <i class="fa fa-file-picture-o"></i>&nbsp;MIS REPORTS
+                        </a>
+                        <ul class="nav-sub">
+                        </ul>
+                    </li>
+                   
+                    <li class="nav-dropdown">
+                        <a href="#" title="MIS REPORTS">
+                            <i class="fa fa-file-picture-o"></i>&nbsp;Document Print
+                        </a>
+                        <ul class="nav-sub">
+
+                            <li>
+                                <a href="../DOCUMENTPRINT/IndentList.aspx?exid=DPRINT" title="Indent Printing">
+                                    <i class="fa fa-fw fa-caret-right"></i>Sales Order
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                    <li class="nav-dropdown">
+                        <a href="#" title="MIS REPORTS">
+                            <i class="fa fa-file-picture-o"></i>&nbsp;MASTER LIST
+                        </a>
+                        <ul class="nav-sub">
+                        </ul>
+                    </li>
+                   
+                    <li class="nav-dropdown">
+                        <a href="#" title="MIS REPORTS">
+                            <i class="fa fa-file-picture-o"></i>&nbsp;SETUP
+                        </a>
+                        <ul class="nav-sub">
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#" title="Logout / Change Password">
+                            <i class="fa fa-lg fa-fw fa-edit"></i>Logout / Change Password
+                        </a>
+                        <ul class="nav-sub">
+
+
+                            <li>
+                                <a href="../logout.aspx?exid=logout" title="Log Out">
+                                    <i class="fa fa-fw fa-caret-right"></i>Log Out
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../Changepassword.aspx?exid=logout" title="Change password">
+                                    <i class="fa fa-fw fa-caret-right"></i>Change password
+                                </a>
+                            </li>
+
+
+
+
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+        </aside>
+
+        <div class="page-content">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+    </div>
+   
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderAditionalBottomJSCSS" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>
